@@ -1,8 +1,8 @@
 ### ARTICLE TITLE: After the revolution: a review of 3D modelling as a tool for stone artefact analysis ###
-### AUTHOR: Simon Wyatt-Spratt ###
+### AUTHOR: ### ###
 ### JOURNAL: Journal of Computer Applications in Archaeology
-### SCRIPT AUTHOR: Simon Wyatt-Spratt ###
-### SCRIPT CONTACT: simon.wyatt-spratt@sydney.edu.au ###
+### SCRIPT AUTHOR: ### ###
+### SCRIPT CONTACT: ### ###
 ### LAST EDITED: 31/08/2022 ###
 
 ### ABSTRACT ###
