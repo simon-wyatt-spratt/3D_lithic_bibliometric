@@ -3,7 +3,7 @@
 ### JOURNAL: Journal of Computer Applications in Archaeology
 ### SCRIPT AUTHOR: Simon Wyatt-Spratt ###
 ### SCRIPT CONTACT: simon.wyatt-spratt@sydney.edu.au ###
-### LAST EDITED: 31/08/2022 ###
+### LAST EDITED: 19/10/2022 ###
 
 ### ABSTRACT ###
 ### With over 200 peer-reviewed papers published over the last 20 years, 3D modelling is no longer a gimmick but an 
@@ -32,12 +32,12 @@
 ### SCRIPT ###
 
 ### KNOWN ISSUES ###
-# None.
+### None.
 
 ### INSTALL AND ACTIVIATE PACKAGES ###
-if(!require("bibliometrix")) install.packages("bibliometrix", repos = "http://cran.us.r-project.org") # bibliometrix 4.0.0
+if(!require("bibliometrix")) install.packages("bibliometrix", repos = "http://cran.us.r-project.org") # bibliometrix 4.0.1
 if(!require("cowplot")) install.packages('cowplot', repos='http://cran.us.r-project.org') # cowplot 1.1.1
-if(!require("igraph")) install.packages('igraph', repos='http://cran.us.r-project.org') # igraph 1.3.1
+if(!require("igraph")) install.packages('igraph', repos='http://cran.us.r-project.org') # igraph 1.3.5
 if(!require("qgraph")) install.packages('qgraph', repos='http://cran.us.r-project.org') # qgraph 1.9.2
 if(!require("tidyverse")) install.packages("tidyverse", repos = "http://cran.us.r-project.org") # tidyverse 1.3.2
 if(!require("viridis")) install.packages("viridis", repos = "http://cran.us.r-project.org") # viridis 0.6.2
@@ -212,7 +212,7 @@ ggsave2("results/Wyatt-Spratt_2022_Figure_2.tiff",
 
 # NOTE: Cluster analysis is iterative. This means that there are variations when the code is run in how authors
 # cluster. These are generally minor. To run different iterations remove "set.seed(1)", and you can view different 
-# iterations of the cluster.
+# iterations of the clusters.
 
 set.seed(1)
 
@@ -286,17 +286,19 @@ ggsave2("results/Wyatt-Spratt_2022_Figure_4.tiff",
         plot = figure_4, scale = 1.2, width = 168.275, height = 84.1375, units = "mm", dpi = 300)
 
 ### FIGURE 5. ###
-# Figure 5. Historical Direct Citation Network of the 20 most influential papers by number of local citations, i.e. 
-# papers that are cited by papers within the dataset.
+# Figure 5. Historical Direct Citation Network of the top 25 papers by number of local citations, i.e. papers that are
+# cited by papers within the dataset.
 
 histResults <- histNetwork(dataset.ana, min.citations = 1, sep = ";", network = TRUE)
 
 histplot.ana1 <- histPlot(histResults, 
-                          n = 23, 
+                          n = 25,  
                           size = 2,
                           labelsize = 2
                           )
-figure_5 <- histplot.ana1$g
+figure_5 <- histplot.ana1$g # NOTE: the network plot is iterative, and there will be minor variations in the position
+                            # of the papers in the network each time it is generated, however the relations will 
+                            # remain the same.
 
 ggsave2("results/Wyatt-Spratt_2022_Figure_5.tiff", 
         plot = figure_5, scale = 1, width = 168.275, height = 125, units = "mm", dpi = 300)
@@ -401,7 +403,7 @@ ggsave2("results/Wyatt-Spratt_2022_Figure_8.tiff",
 # Cluster analysis is iterative. This means that there are variations when the code is run in how keywords
 # cluster. These are generally minor, with the only significant difference between different iterations is that
 # occasionally "experimental" and "functional" are sometimes clustered together. To run different iterations remove
-# "set.seed(6)", and you can view different iterations of the cluster.
+# "set.seed(6)", and you can view different iterations of the clusters.
 
 dataset.ca3       <- dataset.ana         # creates a dataset called "dataset.ca3" from dataset.ana
 dataset.ca3['ID'] <- dataset.ca3['CA3']  # replaces the WOS' keywords with the manually added keywords 
