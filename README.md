@@ -8,12 +8,12 @@ Journal: Journal of Computer Applications in Archaeology
 
 Author: [Simon Wyatt-Spratt](https://sydney.academia.edu/SimonWyattSpratt)
 
-DOI:
+DOI: 10.5334/jcaa.103
 
 Repository Author: Simon Wyatt-Spratt
 
 ## Contents
-Contained within this repository are the R code, the original bibliographic data downloaded from Web of Science as a *.txt file, and the edited bibliographic as a *.csv file. Figures produced for the article are also attached, as are two *.csv files that were used to produce the tables in the article.
+Contained within this repository are the R code, the original bibliographic data downloaded from Web of Science as a *.txt file, and the edited bibliographic as a *.csv file. Figures produced for the article are also attached, as are two *.csv files that were used to produce the tables in the article. A copy of the final article and supplementary information is also included.
 
 For anymore information on the code or resources please contact me at: [simon.wyatt-spratt@sydney.edu.au](mailto:simon.wyatt-spratt@sydney.edu.au)
 
