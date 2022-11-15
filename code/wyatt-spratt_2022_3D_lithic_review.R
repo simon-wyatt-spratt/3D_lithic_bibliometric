@@ -3,7 +3,7 @@
 ### JOURNAL: Journal of Computer Applications in Archaeology
 ### SCRIPT AUTHOR: Simon Wyatt-Spratt ###
 ### SCRIPT CONTACT: simon.wyatt-spratt@sydney.edu.au ###
-### LAST EDITED: 19/10/2022 ###
+### LAST EDITED: 10/11/2022 ###
 
 ### ABSTRACT ###
 ### With over 200 peer-reviewed papers published over the last 20 years, 3D modelling is no longer a gimmick but an 
@@ -49,13 +49,13 @@ library(qgraph)       # load qgraph package
 library(tidyverse)    # load tidyverse package
 library(viridis)      # load viridis package
 
-### SET WORKING DIRECTORY ### - update to github for the final code
+### SET WORKING DIRECTORY ###
 getwd() # Show working directory
 
 ### IMPORT DATA ###
 
 ### WEB OF SCIENCE ORIGINAL PLAINTEXT ####
-dataset.wos <- convert2df('data/wos_3D_lithic_export_unedited.txt', dbsource = 'wos', format = "plaintext") # will need to change file name
+dataset.wos <- convert2df('data/wos_3D_lithic_export_unedited.txt', dbsource = 'wos', format = "plaintext")
 head(dataset.wos["TI"])
 
 ### MODIFIED AND ADDITIONAL *.CSV DATA ###
