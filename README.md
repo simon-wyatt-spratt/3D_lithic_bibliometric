@@ -23,3 +23,5 @@ For anymore information on the code or resources please contact me at: [simon.wy
 Text and figures : [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)
 
 Data : CC-0 attribution requested in reuse
+
+<a href="https://zenodo.org/doi/10.5281/zenodo.7037022"><img src="https://zenodo.org/badge/530066445.svg" alt="DOI"></a>
